@@ -1,0 +1,5 @@
+condition,accuracy,balanced_accuracy,roc_auc
+Original,0.8587,0.8585,0.9317
+JPEG quality 75,0.806,0.8055,0.8912
+JPEG quality 50,0.7853,0.7848,0.8751
+"Downscaled to 56x56, then resized",0.698,0.6965,0.8123

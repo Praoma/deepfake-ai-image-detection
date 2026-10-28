@@ -1,0 +1,55 @@
+{
+  "project": "Generalizable AI-Generated Image Detection",
+  "dataset": "tkbarb10/ADS504-Image-Arrays",
+  "image_size": 224,
+  "batch_size": 32,
+  "seed": 42,
+  "class_mapping": {
+    "0": "AI-generated",
+    "1": "Human-created"
+  },
+  "models": {
+    "EfficientNet-B0": {
+      "test_accuracy": 0.8247,
+      "balanced_accuracy": 0.8249,
+      "macro_f1": 0.8246,
+      "roc_auc": 0.9104
+    },
+    "ResNet-50": {
+      "test_accuracy": 0.8493,
+      "balanced_accuracy": 0.8495,
+      "macro_f1": 0.8493,
+      "roc_auc": 0.9323
+    },
+    "ConvNeXt-Tiny": {
+      "test_accuracy": 0.8587,
+      "balanced_accuracy": 0.8585,
+      "macro_f1": 0.8585,
+      "roc_auc": 0.9317
+    }
+  },
+  "robustness": {
+    "Original": {
+      "accuracy": 0.8587,
+      "roc_auc": 0.9317
+    },
+    "JPEG quality 75": {
+      "accuracy": 0.806,
+      "roc_auc": 0.8912
+    },
+    "JPEG quality 50": {
+      "accuracy": 0.7853,
+      "roc_auc": 0.8751
+    },
+    "Downscaled 56x56 then resized": {
+      "accuracy": 0.698,
+      "roc_auc": 0.8123
+    }
+  },
+  "limitations": [
+    "Unseen-generator generalization has not been validated.",
+    "The dataset does not provide sufficient per-image generator provenance.",
+    "Robustness results apply to the tested transformations only.",
+    "Grad-CAM visualizations are qualitative and do not prove causal reasoning."
+  ]
+}

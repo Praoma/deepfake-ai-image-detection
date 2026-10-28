@@ -172,4 +172,3 @@ For reproducibility, preserve the experiment configuration, package versions, pr
 ## Disclaimer
 
 This project is an experimental image classifier, not a definitive forensic detector. Its predictions should not be treated as proof that an image is AI-generated or human-created. Further independent evaluation is required before making claims about generalization to unseen generators or real-world forensic reliability.
-
